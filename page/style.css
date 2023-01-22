@@ -6,10 +6,97 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+    font-size: 25px;
+    color: white;
+    margin: 9px;
+}
 
-.top_page legend {
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.top_page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.task_box {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    padding: 10px;
+    background: #252527;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.task_box label {
+    color: white;
+    margin: 4px;
+}
+
+.task_box button {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+.schedule_box {
+    display: flex;
+    width: 400px;
+    margin: 20px;
+    flex-direction: column;
+    padding: 10px;
+    background: #252527;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.schedule_box label {
+    color: white;
+    margin: 4px;
+}
+
+.schedule_box button {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.task_box_table {
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 20px;
+    background: #252527;
     color: white;
 }
-.top_page label {
+
+.schedule_box_table {
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 20px;
+    background: #252527;
     color: white;
+}
+
+.bottom_page {
+    background: rebeccapurple;
 }
