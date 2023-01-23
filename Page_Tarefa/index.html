@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Style CSS-->
+    <link rel="stylesheet" href="../Page_Tarefa/style.css">
+
+    <!-- Script Javascript-->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- Fontes Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+
+    <title>Tarefa</title>
+</head>
+<body>
+<div class="page">
+
+    <div class="barra_navegacao">
+        <ul>
+            <li id="task_page">Tarefa</li>
+            <li id="schelude_page">Agenda</li>
+            <li id="exit_page">Sair</li>
+        </ul>
+    </div>
+
+    <div class="top_page">
+        
+        <div class="task_box">
+        <form id="formulario_tarefa" action="">  
+            <h1>Tarefa</h1>
+            <div class="task_title_box">
+                <label for="task_title">Titulo</label> <br>
+                <input id="task_title" type="text" maxlength="30" 
+                minlength="4">
+            </div>
+            
+            <div class="task_desc_box">
+                <label for="task_desc">Descrição</label> <br>
+                <textarea id="task_desc" cols="50" rows="4"></textarea>
+            </div>
+
+            <div class="task_priority_box">
+                <label for="task_priority">Prioridade:</label>
+                <input id="task_priority" type="checkbox">
+            </div>
+
+            <div class="task_date_box">
+                <label for="task_date">Data:</label>
+                <input id="task_date" type="date">
+            </div>
+
+            <button type="submit" value="Enviar">Enviar</button>
+
+        </form>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <div class="task_box_table">
+            <table id="table_task">
+                <tr>
+                    <th>Titulo</th>
+                    <th>Descricao</th>
+                    <th>Data</th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="bottom_page">
+        RODAPE
+    </div>
+</div>
+
+
+
+
+<script>
+    $("#formulario_tarefa").submit(function(e){
+    e.preventDefault();
+    var titulo = $("#task_title").val();
+    var descricao = $("#task_desc").val();
+    var data = $("#task_date").val();
+
+    $("#table_task").append("<tr><td>"+titulo+"<td>"+descricao+"<td>"+data+"<tr><td>");
+});
+
+
+var button_task_page = document.getElementById("task_page");
+button_task_page.addEventListener("click", function() {
+    window.location.href = "../Page_Tarefa/index.html"
+})
+
+var button_schelude_page = document.getElementById("schelude_page");
+button_schelude_page.addEventListener("click", function() {
+    window.location.href = "../Page_Agenda/index.html"
+})
+
+var button_exit_page = document.getElementById("exit_page");
+button_exit_page.addEventListener("click", function() {
+    window.location.href = "../Page_Login/index.html"
+})
+
+</script>
+
+</body>
+</html>
